@@ -11,7 +11,7 @@ class Product{
     }
     //IMPRIME LOS RESULTADOS EN HTML
     infoHTML(){
-        return `| ${this.id} | ${this.name} | ${this.amount} | ${this.cost} | ${this.getTotal()}<br>`;
+        return `| ${this.id} | ${this.name} | ${this.amount} | ${this.cost} | ${this.getTotal()} |<br>`;
     }
 }
 //CLASE PARA LOS FUNCIONES DE LOS PRODUCTOS
@@ -111,6 +111,7 @@ let ui = new Interface();
 //TOMA ACCION DE BOTON PARA FUNCION AGREGAR
 const btnAdd=document.getElementById('btnAdd');
 btnAdd.addEventListener('click',()=>{
+    //TOMA DATOS HTML
     let id = document.getElementById('idAdd').value;
     let name = document.getElementById('name').value;
     let amount = document.getElementById('amount').value;
@@ -122,6 +123,7 @@ btnAdd.addEventListener('click',()=>{
 //TOMA ACCION DE BOTON PARA FUNCION ELIMINAR
 const btnDelete=document.getElementById('btnDelete');
 btnDelete.addEventListener('click',()=>{
+    //TOMA DATO HTML
     let id = document.getElementById('idDelete').value;
     ui.addProduct(depot.delete(id));
 });
@@ -129,6 +131,7 @@ btnDelete.addEventListener('click',()=>{
 //TOMA ACCION DE BOTON PARA FUNCION BUSCAR
 const btnSearch=document.getElementById('btnSearch');
 btnSearch.addEventListener('click',()=>{
+    //TOMA DATO HTML
     let id = document.getElementById('idSearch').value;
     ui.addProduct(depot.search(id));
 });
